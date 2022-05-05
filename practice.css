@@ -99,6 +99,6 @@ body {
   }
   100% {
     opacity: 0;
-    transform: scaleX(0) translateY(-350px);
+    transform: scaleX(8) translateY(-350px);
   }
 }
