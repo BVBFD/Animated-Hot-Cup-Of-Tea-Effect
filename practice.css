@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: lightslategray;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.plate {
+  width: 30rem;
+  height: 20rem;
+  border-radius: 50%;
+  background: whitesmoke;
+  box-shadow: inset 0 0 8rem #bcbbbb;
+  transform: rotateX(50deg);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.cup {
+  position: relative;
+  top: -17rem;
+  width: 18rem;
+  height: 30rem;
+  background: whitesmoke;
+  box-shadow: inset 0 0 5rem #999;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.coffee {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -2.2rem;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #db7e7e, #b95656);
+  border-left: 1rem solid whitesmoke;
+  border-right: 1rem solid whitesmoke;
+  border-top: 1rem solid whitesmoke;
+  border-bottom: 0.5rem solid whitesmoke;
+}
+
+.cupHolder {
+  position: absolute;
+  top: 7rem;
+  right: -4rem;
+  width: 8rem;
+  height: 10rem;
+  z-index: -1;
+  border-radius: 50%;
+  transform: rotate(30deg);
+  transform: skewX(-20deg);
+  border: 20px solid whitesmoke;
+  box-shadow: 0 0 8rem #bcbbbb;
+  border-left: none;
+  border-bottom: none;
+}
+
+.vapour {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.vapour span {
+  margin: 0 0.1rem 0 0.1rem;
+  display: inline-block;
+  position: relative;
+  top: 0;
+  width: 0.5rem;
+  height: 6rem;
+  background: #fff;
+  filter: blur(6px);
+  animation: animVapour 5s linear infinite;
+  animation-delay: calc(var(--i) * -0.5s);
+}
+
+@keyframes animVapour {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(4) translateY(-150px);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleX(0) translateY(-350px);
+  }
+}
